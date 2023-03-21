@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 
 import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
