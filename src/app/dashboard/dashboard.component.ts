@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Hero } from '../hero'
+import { Hero } from '../hero';
 import { HeroService } from '../services/hero.service';
-import { MessageService } from '../services/message.service';
+
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class TestComponent {
+export class DashboardComponent {
   heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) { }
@@ -19,6 +19,6 @@ export class TestComponent {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
   }
 }
