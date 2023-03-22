@@ -22,3 +22,14 @@ label {
     color: #ccc;
     cursor: auto;
   }
+
+  .button_save {
+    transition-duration: 0.4s;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+  
+  .button_save:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
