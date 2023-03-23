@@ -1,35 +1,40 @@
 /* HeroDetailComponent's private CSS styles */
 label {
-    color: #435960;
-    font-weight: bold;
-  }
-  input {
-    font-size: 1em;
-    padding: .5rem;
-  }
-  button {
-    margin-top: 20px;
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-  }
+  color: #435960;
+  font-weight: bold;
+}
 
-  .button_save {
-    transition-duration: 0.4s;
-    padding: 15px 32px;
-    font-size: 16px;
-  }
-  
-  .button_save:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
-  }
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #080808;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+button.save {
+  /* transition-duration: 0.4s; */
+  padding: 15px 32px;
+  font-size: 16px;
+}
+
+button.save:hover {
+  background-color: #4CAF50;
+  color: white;
+}
