@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import { Hero } from '../hero'
 import { HeroService } from '../services/hero.service';
-import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-test',
@@ -10,6 +10,7 @@ import { MessageService } from '../services/message.service';
 })
 export class TestComponent {
   heroes: Hero[] = [];
+  hero: Hero | undefined;
 
   constructor(private heroService: HeroService) { }
 

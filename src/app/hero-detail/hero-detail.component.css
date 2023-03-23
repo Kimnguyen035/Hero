@@ -1,5 +1,4 @@
-/* HeroDetailComponent's private CSS styles */
-label {
+/* label {
   color: #435960;
   font-weight: bold;
 }
@@ -29,7 +28,7 @@ button:disabled {
 }
 
 button.save {
-  /* transition-duration: 0.4s; */
+  transition-duration: 0.4s;
   padding: 15px 32px;
   font-size: 16px;
 }
@@ -37,4 +36,14 @@ button.save {
 button.save:hover {
   background-color: #4CAF50;
   color: white;
+} */
+
+.container .modal-header {
+    background-color: #17a2b8;
+    color: white;
+    padding: 0.7rem 1rem;
+}
+
+.container .modal-body {
+  padding: 1rem 0;
 }

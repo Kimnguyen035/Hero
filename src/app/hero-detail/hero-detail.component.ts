@@ -20,6 +20,9 @@ export class HeroDetailComponent {
     private location: Location
   ) {}
 
+  powers = ['Really Smart', 'Super Flexible',
+            'Super Hot', 'Weather Changer'];
+
   ngOnInit(): void {
     this.getHero();
   }
