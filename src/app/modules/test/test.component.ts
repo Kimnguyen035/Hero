@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import { Hero } from '../hero'
-import { HeroService } from '../services/hero.service';
+import { Hero } from '../../hero'
+import { HeroService } from '../../services/data/hero.service';
 
 @Component({
   selector: 'app-test',

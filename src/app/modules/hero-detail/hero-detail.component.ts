@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { Hero } from '../../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { HeroService } from '../services/hero.service';
+import { HeroService } from '../../services/data/hero.service';
 
 
 @Component({
