@@ -18,7 +18,7 @@ export class DashboardComponent {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
+    this.heroService.getHe()
       .subscribe(heroes => this.heroes = heroes.slice(0, 4));
   }
 }
