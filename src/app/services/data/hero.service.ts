@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class HeroService {
   private heroesUrl = 'api/heroes';
-  headers = {};
+  headers = {}; 
 
   constructor(private http: HttpClient, private messageService: MessageService) {
     this.headers = {
@@ -37,24 +37,12 @@ export class HeroService {
     };
   }
 
-  getHe(): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl)
-      .pipe(
-        tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<Hero[]>('getHeroes', []))
-      );
-  }
-
   getHeroes() {
     return this.http.get<any>('http://localhost:8000/get-all', this.headers);
   }
 
-  getHero(id: Number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero>(url).pipe(
-      tap(_ => this.log(`fetched hero id=${id}`)),
-      catchError(this.handleError<Hero>(`getHero id=${id}`))
-    );
+  getHero(id: any) {
+    return this.http.get<any>('http://localhost:8000/get-detail/' + id, this.headers);
   }
 
   updateHero(hero: Hero): Observable<any> {

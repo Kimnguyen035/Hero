@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<!-- <div *ngIf="hero">
   <h2>{{hero.name | uppercase}}</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
@@ -7,4 +7,12 @@
   </div>
   <button type="button" (click)="goBack()">go back</button>
   <button type="button" class="save" (click)="save()">save</button>
+</div> -->
+
+<div *ngIf="hero" class="popup-overlay">
+  <div class="popup">
+    <h2>{{ hero.id }}</h2>
+    <p>{{ hero.name }}</p>
+    <button (click)="goBack()">Close</button>
+  </div>
 </div>
