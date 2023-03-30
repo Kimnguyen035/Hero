@@ -45,8 +45,8 @@ export class DashboardComponent {
     const id = Number(hero.id);
     this.heroService.getHero(id).subscribe((res) => {
       if (res && res.statusCode === 1) {
-        const modalRef = this.modalService.open(HeroDetailComponent);
-        modalRef.componentInstance.obj = Object.assign(hero, res.data);
+        const modalRef = this.modalService.open(HeroDetailComponent, { size: 'lg'});
+        modalRef.componentInstance.hr = Object.assign(hero, res.data);
       }
       else {
         Swal.fire('Thất bại', res.message, 'warning');

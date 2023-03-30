@@ -38,20 +38,69 @@ button.save:hover {
   color: white;
 } */
 
-.popup-overlay {
+.employee-hero-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popup {
+.modal-header {
+  background-color: #17a2b8;
+  display: flex;
+}
+
+/* Định dạng cho tiêu đề của cửa sổ pop-up */
+.modal-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* margin-right: 800px; */
+  background-color: red;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 20px;
+  background-color: green;
+}
+
+/* Định dạng cho phần nội dung của cửa sổ pop-up */
+.modal-body {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.close:hover,
+.close:focus {
+  color: #000; /*Thay đổi màu chữ khi hover hoặc focus vào nút*/
+  text-decoration: none;
+  cursor: pointer; /*Hiển thị con trỏ tay khi hover vào nút*/
+}
+
+/* Style cho các phần tử trong nội dung modal */
+.item {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

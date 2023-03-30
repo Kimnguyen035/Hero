@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hero } from '../../hero';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { HeroService } from '../../services/data/hero.service';
+import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 
 @Component({
@@ -12,12 +9,10 @@ import { HeroService } from '../../services/data/hero.service';
 })
 
 export class HeroDetailComponent {
-  hero: Hero | undefined;
+  hr: any;
 
   constructor(
-    private route: ActivatedRoute,
-    private heroService: HeroService,
-    private location: Location
+    private activeModal: NgbActiveModal
   ) {}
 
   powers = ['Really Smart', 'Super Flexible',
@@ -28,13 +23,13 @@ export class HeroDetailComponent {
   }
 
   goBack(): void {
-    this.location.back();
+    this.activeModal.close();
   }
 
   save(): void {
-    if (this.hero) {
-      this.heroService.updateHero(this.hero)
-        .subscribe(() => this.goBack());
-    }
+    // if (this.hero) {
+    //   this.heroService.updateHero(this.hero)
+    //     .subscribe(() => this.goBack());
+    // }
   }
 }
