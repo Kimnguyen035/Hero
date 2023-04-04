@@ -1,7 +1,7 @@
 <h2>Top Heroes</h2>
 <div class="heroes-menu">
   <button *ngFor="let hero of heroes"
-      (click)="getHero(hero)">
+      (click)="getHero(hero)" onKeyDown="">
       {{hero.name}}
   </button>
 </div>

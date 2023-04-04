@@ -1,106 +1,283 @@
-/* label {
-  color: #435960;
-  font-weight: bold;
-}
-
-input {
-  font-size: 1em;
-  padding: .5rem;
-}
-
-button {
-  margin-top: 20px;
-  margin-right: .5rem;
-  background-color: #eee;
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-button:hover {
-  background-color: #080808;
-}
-
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
-}
-
-button.save {
-  transition-duration: 0.4s;
-  padding: 15px 32px;
-  font-size: 16px;
-}
-
-button.save:hover {
-  background-color: #4CAF50;
-  color: white;
-} */
-
-.employee-hero-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
+/* .employee-hero-container {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .modal-header {
-  background-color: #17a2b8;
+  background-color: #007bff;
+  color: #ffffff;
   display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-/* Định dạng cho tiêu đề của cửa sổ pop-up */
-.modal-title {
-  color: white;
+.modal-header h5 {
+  margin: 0;
+}
+
+.modal-header button {
+  background: transparent;
+  border: none;
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 20px;
-  /* margin-right: 800px; */
-  background-color: red;
+  line-height: 1;
+  margin: -10px -10px -10px auto;
+  padding: 0 10px;
 }
 
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-bottom: 20px;
-  background-color: green;
+.modal-header button:focus {
+  outline: none;
 }
 
-/* Định dạng cho phần nội dung của cửa sổ pop-up */
+.modal-header button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .modal-body {
-  background-color: white;
-  padding: 20px;
-  /* border-radius: 5px; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  padding: 10px;
 }
 
-.close:hover,
-.close:focus {
-  color: #000; /*Thay đổi màu chữ khi hover hoặc focus vào nút*/
-  text-decoration: none;
-  cursor: pointer; /*Hiển thị con trỏ tay khi hover vào nút*/
-}
-
-/* Style cho các phần tử trong nội dung modal */
 .item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-label {
+.item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item input[type="text"] {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+}
+
+.item input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modal-footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modal-footer button {
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.modal-footer button:focus {
+  outline: none;
+}
+
+.modal-footer button:first-of-type {
+  background-color: #dddddd;
+}
+
+.modal-footer button:last-of-type {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.modal-footer button:last-of-type:hover {
+  background-color: #0069d9;
+  cursor: pointer;
+}
+
+.modal-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */
+
+
+
+
+
+
+
+
+
+
+.employee-hero-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modal-header h5 {
+  margin: 0;
+}
+
+.modal-header button {
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1;
+  margin: -10px -10px -10px auto;
+  padding: 0 10px;
+}
+
+.modal-header button:focus {
+  outline: none;
+}
+
+.modal-header button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px 40px 330px 20px;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.item label {
   display: block;
   margin-bottom: 5px;
+}
+
+.item input[type="text"] {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.modal-footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modal-footer button {
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.modal-footer button:focus {
+  outline: none;
+}
+
+.modal-footer button:first-of-type {
+  background-color: #dddddd;
+}
+
+.modal-footer button:last-of-type {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.modal-footer button:last-of-type:hover {
+  background-color: #0069d9;
+  cursor: pointer;
+}
+
+.modal-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* .modal-footer {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: right;
+}
+
+.modal-footer button {
+  margin-left: 10px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+} */
+
+
+
+
+
+
+
+
+
+/* .popup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popup-content {
+  padding: 20px;
+}
+
+.popup-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.popup-label {
+  flex-basis: 30%;
   font-weight: bold;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.popup-value {
+  flex-basis: 70%;
 }
+
+.popup-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.popup-button:hover {
+  background-color: #0062cc;
+} */

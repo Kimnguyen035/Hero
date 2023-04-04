@@ -11,6 +11,7 @@ import { MessageComponent } from './modules/message/message.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HeroSearchComponent } from './modules/hero-search/hero-search.component';
 
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HeroSearchComponent } from './modules/hero-search/hero-search.component
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

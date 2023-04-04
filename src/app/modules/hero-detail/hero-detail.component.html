@@ -1,19 +1,6 @@
-<!-- <div *ngIf="hr" class="popup-overlay">
-  <div>
-    <h2>{{hr.name | uppercase}}</h2>
-    <div><span>id: </span>{{hr.id}}</div>
-    <div>
-      <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hr.name" placeholder="Hero name"/>
-    </div>
-    <button type="button" (click)="goBack()">go back</button>
-    <button type="button" class="save" (click)="save()">save</button>
-  </div>
-</div> -->
-
 <div class="employee-hero-container">
   <div class="modal-header">
-    <h5 class="modal-title"><strong>Thông tin chi tiết</strong></h5>
+    <h5 class="modal-title"><strong>Detail Hero</strong></h5>
     <button type="button" class="close" (click)="goBack()">
       <span aria-hidden="true" style="color: white">&times;</span>
     </button>
@@ -35,3 +22,28 @@
     <button type="button" class="btn btn-primary" (click)="goBack()">Save</button>
   </div>
 </div>
+
+
+
+<!-- <h1 mat-dialog-title class="popup-title">Thông tin chi tiết</h1>
+<div mat-dialog-content class="popup-content">
+  <div class="popup-row">
+    <div class="popup-label">Code</div>
+    <div class="popup-value">{{hr.id}}</div>
+  </div>
+  <div class="popup-row">
+    <div class="popup-label">Name</div>
+    <div class="popup-value">{{hr.name}}</div>
+  </div>
+  <div class="popup-row">
+    <div class="popup-label">Giá:</div>
+    <div class="popup-value">500,000 đ</div>
+  </div>
+  <div class="popup-row">
+    <div class="popup-label">Mô tả:</div>
+    <div class="popup-value">Áo khoác nam dày dặn, chất liệu chống nước tốt, phù hợp với mọi thời tiết.</div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button class="popup-button" (click)="goBack()">Đóng</button>
+</div> -->

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import { MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -8,22 +9,24 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./hero-detail.component.css']
 })
 
-export class HeroDetailComponent {
+export class HeroDetailComponent implements OnInit {
   hr: any;
 
   constructor(
     private activeModal: NgbActiveModal
   ) {}
 
+  // constructor(public dialogRef: MatDialogRef<HeroDetailComponent>) { }
+
   powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+    'Super Hot', 'Weather Changer'];
 
   ngOnInit(): void {
-    // this.getHero();
   }
 
   goBack(): void {
     this.activeModal.close();
+    // this.dialogRef.close();
   }
 
   save(): void {
