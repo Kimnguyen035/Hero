@@ -15,8 +15,12 @@ import {NgxSpinnerService} from "ngx-spinner";
 export class DashboardComponent implements OnInit {
   heroes: any;
 
-  constructor(private heroService: HeroService, private modalService: NgbModal, private spinner: NgxSpinnerService) { }
-  // constructor(private heroService: HeroService, public dialog: MatDialog) { }
+  constructor(
+    private heroService: HeroService,
+    private modalService: NgbModal,
+    private spinner: NgxSpinnerService,
+    public dialog: MatDialog,
+  ) { }
 
   ngOnInit(): void {
     this.getHeroes();
