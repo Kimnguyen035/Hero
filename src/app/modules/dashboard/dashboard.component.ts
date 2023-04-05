@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { Hero } from '../../hero';
 import { HeroService } from '../../services/data/hero.service';
 import Swal from "sweetalert2";
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModal, NgbModalOptions } from "@ng-bootstrap/ng-bootstrap";
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { MatDialog } from '@angular/material/dialog';
 import {NgxSpinnerService} from "ngx-spinner";
@@ -49,14 +49,19 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  getHero(hero: any) {
+  openDetail(hero: any) {
     const id = Number(hero.id);
     // this.spinner.show();
     this.heroService.getHero(id).subscribe((res) => {
       // this.spinner.hide();
       if (res && res.statusCode === 1) {
-        const modalRef = this.modalService.open(HeroDetailComponent, { size: 'lg' });
+        const modalOptions: NgbModalOptions = {
+          backdrop: 'static',
+          size: 'lg',
+        };
+        const modalRef = this.modalService.open(HeroDetailComponent, modalOptions);
         modalRef.componentInstance.hr = Object.assign(hero, res.data);
+        console.log(modalRef)
         // const dialogRef = this.dialog.open(HeroDetailComponent, {
         //   width: '500px',
         //   height: '500px'

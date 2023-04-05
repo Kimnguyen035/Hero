@@ -12,6 +12,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HeroSearchComponent } from './modules/hero-search/hero-search.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
