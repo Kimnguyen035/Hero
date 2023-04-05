@@ -55,13 +55,9 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHero(id).subscribe((res) => {
       // this.spinner.hide();
       if (res && res.statusCode === 1) {
-        const modalOptions: NgbModalOptions = {
-          backdrop: 'static',
-          size: 'lg',
-        };
+        const modalOptions: NgbModalOptions = { size: 'lg' };
         const modalRef = this.modalService.open(HeroDetailComponent, modalOptions);
         modalRef.componentInstance.hr = Object.assign(hero, res.data);
-        console.log(modalRef)
         // const dialogRef = this.dialog.open(HeroDetailComponent, {
         //   width: '500px',
         //   height: '500px'
